@@ -1,0 +1,29 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  /* padding: 0%; */
+  text-align: center;
+  /* background-color: aquamarine; */
+}
+
+#container {
+  width: 240px;
+  height: 378px;
+  border: 1px solid red;
+  /* padding: 0%;   */
+}
+
+div {
+  border: 1px solid blue;
+  /* padding: 0%;
+  margin: 0%; */
+}
+
+#display {
+  /* border: 10px solid green; */
+  text-align: right;
+  background-color: aquamarine;
+}
+
+
