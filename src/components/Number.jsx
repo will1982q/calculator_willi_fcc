@@ -7,9 +7,7 @@ function Number({value}) {
   
   
   function handleClick(){
-    setInput(input += value ) //works
-    console.log('value',value)
-    console.log('input',input)
+    setInput(input += value ) //works    
   }
 
   return (
