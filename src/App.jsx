@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import Number from './components/Number.jsx'
+import Zero from './components/Zero.jsx'
 import Equal from './components/Equal.jsx'
 import Clear from './components/Clear.jsx'
 import Operator from './components/Operator.jsx'
+import Minus from './components/Minus.jsx'
 import Point from './components/Point.jsx'
 
 import Display from './components/Display.jsx'
@@ -25,25 +27,25 @@ function App() {
             <Equal id='equals' text={"="} />
           </div>        
           <div className ='row'>          
-            <Number id='seven' value={7} />
-            <Number id='eigth' value={8} />
-            <Number id='nine' value={9}  />
+            <Number id='seven' text={"7"} />
+            <Number id='eigth' text={"8"} />
+            <Number id='nine' text={"9"}  />
             <Operator id='divide' text={"/"} /> 
           </div>
           <div className ='row'>
-            <Number id='four' value={4} />
-            <Number id='five' value={5} />
-            <Number id='six' value={6} />
+            <Number id='four' text={"4"} />
+            <Number id='five' text={"5"} />
+            <Number id='six' text={"6"} />
             <Operator id='multiply' text={"X"} />
           </div>
           <div className ='row'>
-            <Number id='one' value={1} />
-            <Number id='two' value={2} />
-            <Number id='three' value={3} />
-            <Operator id='subtract' text={"-"} />
+            <Number id='one' text={"1"} />
+            <Number id='two' text={"2"} />
+            <Number id='three' text={"3"} />
+            <Minus id='subtract' text={"-"} />
           </div>      
           <div className ='row'>
-            <Number id='zero' value={0} />
+            <Zero id='zero' text={"0"} />
             <Point id='decimal' text={"."} />
             <Operator id='add' text={"+"} />        
           </div>

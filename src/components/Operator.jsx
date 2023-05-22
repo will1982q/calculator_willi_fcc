@@ -6,7 +6,13 @@ function Operator({text}) {
   let {input, setInput} = useContext(InputContext)
 
   function handleClick(){
-    setInput(input += text)
+    let lastChar = input[input.length-1]
+    if(lastChar === '/' || lastChar === 'X' || lastChar === '+'){
+      setInput(input = input.substring(0,input.length-1) + text)
+      console.log(input)
+    }else if(lastChar !== '.' && lastChar !== '-'){
+      setInput(input += text)
+    }    
   }
 
   return (
