@@ -14,11 +14,12 @@ import { InputContext } from './utils/InputContext.js'
 
 function App() {
   const [input, setInput] = useState("0")
+  const [result, setResult] = useState(0)
 
   return (
     <>
       <div id='container' className='container text-center'>
-        <InputContext.Provider value={{input, setInput}}>
+        <InputContext.Provider value={{input, setInput, result, setResult}}>
           <div className ='row' id='display' >
             <Display />
           </div>        

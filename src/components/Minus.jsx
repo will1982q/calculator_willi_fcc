@@ -4,9 +4,10 @@ import { InputContext } from '../utils/InputContext'
 
 function Minus({text}) {
   let {input, setInput} = useContext(InputContext)
-
+  //let cont = 0
   function handleClick(){
     let lastChar = input[input.length-1]
+    
     if(input.length === 1){// the first character
         if(input[0] === '0'){
             setInput(input = text)
@@ -14,9 +15,17 @@ function Minus({text}) {
             setInput(input += text)
         }         
     }else{ // more than one character
-        if(lastChar === '/' || lastChar === 'X' || lastChar === '+'){
+        if(lastChar === '/' || lastChar === 'X' || lastChar === '+' || lastChar === '-'){
+          if(input[input.length-2] === '/' || input[input.length-2] === 'X' || input[input.length-2] === '+' || input[input.length-2] === '-'){
+
+          }else{
             setInput(input += text)
-        }else if(lastChar === '.' || lastChar === '-'){
+            console.log(input.length-2)
+          }
+          
+          
+          
+        }else if(lastChar === '.'){
 
         }else{
             setInput(input += text)

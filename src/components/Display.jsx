@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { InputContext } from '../utils/InputContext'
 
 function Display() {
-  let {input, setInput} = useContext(InputContext)
+  let {input, result} = useContext(InputContext)
 
   return (
     <>
@@ -10,7 +10,7 @@ function Display() {
         {input}               
       </div>
       <div className='col-12 p-2'> 
-        {input}
+        {result}
       </div>      
     </>
   )
