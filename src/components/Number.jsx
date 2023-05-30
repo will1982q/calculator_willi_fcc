@@ -18,7 +18,7 @@ function Number({text}) {
   }
   return (
     <>
-      <div  className='col-3 h-15 p-3' onClick={handleClick}>
+      <div  className='col-3 h-15 p-3 fw-bold text-primary-emphasis bg-primary border border-primary-subtle' onClick={handleClick}>
         {text}
       </div>
       

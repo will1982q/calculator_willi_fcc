@@ -9,21 +9,12 @@
 
 #container {
   width: 240px;
-  height: 378px;
-  border: 1px solid red;
-  /* padding: 0%;   */
+  height: 360px;  
 }
 
-div {
-  border: 1px solid blue;
-  /* padding: 0%;
-  margin: 0%; */
-}
 
 #display {
-  /* border: 10px solid green; */
-  text-align: right;
-  background-color: aquamarine;
+  text-align: right;  
 }
 
 

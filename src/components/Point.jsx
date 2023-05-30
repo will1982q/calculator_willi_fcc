@@ -22,14 +22,11 @@ function Point({text}) {
 
       let conOperator = 0
       let j= input.length-1
-      console.log(j)
       while(input[j] !== '/' && input[j] !== 'X' && input[j] !== '-' && input[j] !== '+' && j>=0){
         if(input[j] === '.'){
-          conOperator++
-          console.log(conOperator)        
+          conOperator++                  
         }
-        j--
-        console.log('j',j)
+        j--        
       }
       if(conOperator === 0){
         setInput(input += text)      
@@ -40,7 +37,7 @@ function Point({text}) {
   
   return (
     <>
-      <div  className='col-6 h-15 p-3' onClick={handleClick}>
+      <div  className='col-6 h-15 p-3 fw-bold text-primary-emphasis bg-primary border border-primary-subtle' onClick={handleClick}>
         {text}
       </div>
       

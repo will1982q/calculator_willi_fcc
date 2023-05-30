@@ -6,7 +6,6 @@ function Equal({text}) {
   let {input, setInput, result, setResult} = useContext(InputContext)
 
   function handleClick(){
-    console.log(validateInput())
     if(validateInput()){
       calculateResult()
     }
@@ -35,8 +34,7 @@ function Equal({text}) {
 
         if(cont === 0){ // positive number
           num += input[i]
-          console.log('L34')
-
+          
         }else if(cont === 1){ // negative number
           
           num += input[i]
@@ -52,7 +50,6 @@ function Equal({text}) {
         
         if(i === input.length-1){
           operationsAr.push(parseFloat(num))
-          console.log('L46',num)
           num = ""
           
           cont = 0
@@ -63,7 +60,6 @@ function Equal({text}) {
         if(num !== "" ){
           operationsAr.push(parseFloat(num))
           num = ""
-          console.log('L54',num)
           cont = 0
         }
         num = ""
@@ -71,8 +67,7 @@ function Equal({text}) {
         operator += input[i]      
       }
     }
-    console.log('L42:',operationsAr)
-
+    
     for(let i=0;i<operationsAr.length;i++){
       if(operationsAr[i] === 'X'){
         operationsAr.splice(i-1,3,operationsAr[i-1] * operationsAr[i+1])
@@ -111,9 +106,8 @@ function Equal({text}) {
           i-- 
         }
       }
-    }    
+    } 
     
-
     setInput(input = operationsAr[0])
 
     let index = operationsAr[0].toString().indexOf('.')
@@ -145,7 +139,7 @@ function Equal({text}) {
 
   return (
     <>
-      <div className='col-6 h-15 p-3' onClick={handleClick}>
+      <div className='col-6 h-15 p-3 fw-bold text-primary-emphasis bg-primary border border-primary-subtle' onClick={handleClick}>
         {text}
       </div>
       

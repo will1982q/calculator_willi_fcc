@@ -7,25 +7,12 @@ function Zero({text}) {
   function handleClick(){
     if(input.length === 1){      
         if(input[0] === "0"){
-          setInput(input = text)
-          console.log('L13',input)
+          setInput(input = text)          
         }else{
           setInput(input += text )
         } 
             
-    }else{ //
-      // let conOperator = 0 //HERE
-      // let j= input.length-1      
-      // while(input[j] !== '/' && input[j] !== 'X' && input[j] !== '-' && input[j] !== '+' && j>=0){
-      //   if(input[j] === '0'){
-      //     conOperator++                  
-      //   }
-      //   j--        
-      // }
-      // console.log('conOpetrator', conOperator)
-      // if(conOperator === 0){
-      //   setInput(input += text)      
-      // }     
+    }else{ //     
       
       let lastChar = input[input.length-1] // last digited character
       let isOperator = false
@@ -43,7 +30,7 @@ function Zero({text}) {
 
   return (
     <>
-      <div  className='col-3 h-15 p-3' onClick={handleClick}>
+      <div  className='col-3 h-15 p-3 fw-bold text-primary-emphasis bg-primary border border-primary-subtle' onClick={handleClick}>
         {text}
       </div>
       

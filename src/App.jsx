@@ -18,9 +18,9 @@ function App() {
 
   return (
     <>
-      <div id='container' className='container text-center'>
+      <div id='container' className='container text-center border border-black'>
         <InputContext.Provider value={{input, setInput, result, setResult}}>
-          <div className ='row' id='display' >
+          <div className ='row' id='display'>
             <Display />
           </div>        
           <div className ='row'>

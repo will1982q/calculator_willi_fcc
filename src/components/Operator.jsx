@@ -8,8 +8,7 @@ function Operator({text}) {
   function handleClick(){
     let lastChar = input[input.length-1]
     if(lastChar === '/' || lastChar === 'X' || lastChar === '+'){
-      setInput(input = input.substring(0,input.length-1) + text)
-      console.log(input)
+      setInput(input = input.substring(0,input.length-1) + text)      
     }else if(lastChar !== '.' && lastChar !== '-'){
       setInput(input += text)
     }    
@@ -17,7 +16,7 @@ function Operator({text}) {
 
   return (
     <>
-      <div  className='col-3 h-15 p-3' onClick={handleClick}>
+      <div  className='col-3 h-15 p-3 fw-bold text-primary-emphasis bg-primary border border-primary-subtle' onClick={handleClick}>
         {text}
       </div>
       

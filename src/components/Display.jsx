@@ -6,10 +6,10 @@ function Display() {
 
   return (
     <>
-      <div  className='col-12'>
+      <div  className='col-12 text-white bg-dark border border-black'>
         {input}               
       </div>
-      <div className='col-12 p-2'> 
+      <div className='col-12 p-2 text-white bg-dark border border-black'> 
         {result}
       </div>      
     </>
